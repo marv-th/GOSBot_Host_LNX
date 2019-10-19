@@ -25,7 +25,8 @@ elseif ($statement_1=="stop") {
     include("/opt/gosbot/instance/instance_stop.php");
 }
 elseif ($statement_1=="update") {
-    include("/opt/gosbot/instance/updater.php");
+    //include("/opt/gosbot/instance/updater.php");
+    echo "Diese Funktion wurde in der Version 1.2.4 entfernt.";
 }
 elseif ($statement_1=="help") {
     statement_help();

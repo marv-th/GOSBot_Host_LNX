@@ -1,9 +1,9 @@
-<<<<<<< HEAD
-# GOSBot Client 1.2.4
-=======
-# GOSBot Client
->>>>>>> 178d34b8bdcb2d141e2381322d10046952706f76
+# GOSBot Host 1.2.4
 In dieser Datei geben wir dir ein paar Informationen darüber, was die einzelnen Dateien bzw. Ordner auf deinem Server machen. Zusätzlich geben wir dir ein paar Grundlegende Informationen.
+
+## Was ist neu in der 1.2.4 Version
+Ab der 1.2.4er Version wird ein neues Update System verwendet. Außerdem wurden einige Bugs behoben.
+Mehr Informationen erfährst du unter https://gosbot.de
 
 ## Ordner
 ### Plugin, Instance

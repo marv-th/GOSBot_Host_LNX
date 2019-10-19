@@ -42,7 +42,6 @@ if (!file_exists($updater_json)) {
 $updater_conf = json_decode(file_get_contents($updater_json), true);
 
 $check_update = json_decode($update_pr, true);
-
 if (!array_key_exists("version",$check_update)) {
     if (array_key_exists("error",$check_update)) {
         console_print($check_update["error"], "error");
@@ -99,7 +98,8 @@ if (!array_key_exists("version",$check_update)) {
     $runtime_conf["runtimeOptions"]["framework"]["version"] = "3.0.0";
     $inh_rt_cnf_js = json_encode($runtime_conf,JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     if (!file_put_contents("/opt/gosbot/instance/bot/TS3AudioBot.runtimeconfig.json",$inh_rt_cnf_js)) {
-        echo "Macht er ned";
+        console_print("Could not update runtimeconfig.json", "error");
+        exit();
     }
     if ($updater_conf["start"]) {
         echo shell_exec("cd /opt/gosbot/instance && php instance_start.php");
@@ -107,6 +107,24 @@ if (!array_key_exists("version",$check_update)) {
     }
 
     echo $check_update_text_installed."\n";
+    $update_installed_url = 'https://gosbot.de/api/unix_token_check?token='.$get_config_token.'&method=synch.instance.update.get.installed&plrq=1';
+    $update_installed_pr = file_get_contents($update_installed_url, false);
+    $update_installed = json_decode($update_installed_pr, true);
+    if (!array_key_exists("success",$update_installed)) {
+        console_print($update_installed["error"], "error");
+    } else {
+        if (array_key_exists("success",$update_installed)) {
+            console_print($update_installed["success"], "success");
+        }
+    }
     console_print("Instalation wurde abgeschlossen", "success");
+    /*
+    echo "=========";
+    echo "=========";
+    echo "=========";
+    sleep(1);
+    echo substr(file_get_contents("/opt/gosbot/README.md"),0,500);
+    echo "Read more on https://gosbot.de";
+    */
 }
 
