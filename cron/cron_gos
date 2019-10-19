@@ -1,0 +1,2 @@
+0 * * * * cd /opt/gosbot/instance && /usr/bin/php cron_run_every_hour.php >/dev/null 2>&1
+* * * * * cd /opt/gosbot/instance && /usr/bin/php cron_run_every_minute.php >/dev/null 2>&1
