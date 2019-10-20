@@ -10,5 +10,5 @@ $conf["start"] = true;
 file_put_contents($config_json, json_encode($conf, JSON_PRETTY_PRINT));
 
 
-shell_exec('cd /opt/gosbot/instance/bot && tmux new -d -s "gosbot_client" dotnet TS3AudioBot.dll >/dev/null 2>&1');
+shell_exec('cd /opt/gosbot/instance/bot && tmux new -d -s "gosbot_client" /opt/gosbot/dotnet/./dotnet TS3AudioBot.dll >/dev/null 2>&1');
 echo "\nGOSBot Client wurde gestartet\n";

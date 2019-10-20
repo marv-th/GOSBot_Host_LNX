@@ -1,4 +1,5 @@
 <?php
+/*
 echo "GOSBot Updater.\n";
 
 if (file_exists("/opt/no_gosbot_update")) {
