@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "TS3AudioBot/0.10.0-alpha.184": {
+      "TS3AudioBot/0.10.1+2": {
         "dependencies": {
           "GitVersionTask": "5.0.1",
           "LiteDB": "4.1.4",
@@ -936,7 +936,7 @@
     }
   },
   "libraries": {
-    "TS3AudioBot/0.10.0-alpha.184": {
+    "TS3AudioBot/0.10.1+2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

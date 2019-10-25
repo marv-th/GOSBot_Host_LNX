@@ -14,4 +14,4 @@ $instance_power_url = 'https://gosbot.de/api/unix_token_check?token='.$get_confi
 $instance_power = file_get_contents($instance_power_url, false);
 
 shell_exec(`cd /opt/gosbot/instance/bot && tmux send-keys -t "gosbot_client" '^C' C-m  >/dev/null 2>&1 && sleep 3 && tmux send-keys -t "gosbot_client" '^C' C-m  >/dev/null 2>&1 && sleep 1 && tmux kill-session -t "gosbot_client"  >/dev/null 2>&1`);
-echo "\nGOSBot Client wurde gestoppt.\n";
+echo "\nGOSBot-Host wurde gestoppt.\n";

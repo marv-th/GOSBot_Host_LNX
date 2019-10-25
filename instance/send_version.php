@@ -1,5 +1,6 @@
 <?php
-    //Aktuelle GOSBot Host Version wird zum GOSBot Server gesendet. 
+    //Aktuelle GOSBot Host Version wird zum GOSBot Server gesendet.
+    //Datei wird benötigt, um Update System zu ermöglichen.
 
     $config_json_path = "/opt/gosbot/config/config.json";
     if (!file_exists($config_json_path)) {

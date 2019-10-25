@@ -14,5 +14,5 @@ if ($get_config_token==null) {
     exit("CONFIG TOKEN IS NOT SET");
 }
 
-$song_next = file_get_contents('https://gosbot.de/api?server_token='.$get_config_token.'&method=synch.bot.next.song&botID='.$get_botid.'', false, $context);
+$song_next = file_get_contents('https://gosbot.de/api?server_token='.$get_config_token.'&method=synch.bot.next.song&botID='.$get_botid.'', false);
 echo $song_next;
