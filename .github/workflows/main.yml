@@ -6,7 +6,5 @@ jobs:
     steps:
     - uses: marv-th/GOSBot_Host_LNX@master
     - name: Archive Release
-      uses: thedoctor0/zip-release@master
-      with:
-        filename: 'release.zip'
-        exclusions: '*.git* /*node_modules/* .editorconfig /*instance/*'
+      run: |
+        zip -R gosbot_build.zip *
