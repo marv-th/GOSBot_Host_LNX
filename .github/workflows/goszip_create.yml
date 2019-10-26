@@ -11,4 +11,4 @@ jobs:
       - name: Create GOSZip
         uses: juankaram/archive-action@v1.0.0
         with:
-          args: "zip -r gosout.zip ./instance"
+          args: "zip -r gosout.zip instance"
