@@ -14,8 +14,10 @@ jobs:
     - name: Run a multi-line script
       run: |
         zip -R gosbuild.zip *
-    - name: Upload
-    - uses: actions/upload-artifact@master
+    - uses: xresloader/upload-to-github-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: File upload
-        path: gosbuild.zip
+        file: "gosbuild.zip"
+        tags: true
+        draft: true
