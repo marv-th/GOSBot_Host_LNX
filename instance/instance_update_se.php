@@ -76,6 +76,9 @@ if (!array_key_exists("version",$check_update)) {
     } else {
         console_print("Updateordner wurde erstellt", "success");
     }
+    console_print("Instance wird falls nötig gestoppt", "process");
+        shell_exec("cd /opt/gosbot/instance && php instance_stop.php");
+    console_print("Instance wurde gestoppt", "success");
     console_print("Packete werden heruntergeladen", "process");
     shell_exec("cd /opt/gosbot_update && wget -q $check_update_download");
     if (file_exists("/opt/gosbot_update/$check_update_filename")) {
@@ -118,13 +121,4 @@ if (!array_key_exists("version",$check_update)) {
         }
     }
     console_print("Instalation wurde abgeschlossen", "success");
-    /*
-    echo "=========";
-    echo "=========";
-    echo "=========";
-    sleep(1);
-    echo substr(file_get_contents("/opt/gosbot/README.md"),0,500);
-    echo "Read more on https://gosbot.de";
-    */
 }
-
