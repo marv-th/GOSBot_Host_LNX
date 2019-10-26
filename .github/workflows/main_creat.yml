@@ -18,9 +18,8 @@ jobs:
       uses: juankaram/archive-action@v1.0.0
       with:
         args: "zip -r gosout.zip instance"
-    - name: Upload to release
-      uses: JasonEtco/upload-to-release@master
+    - name: Upload
+    - uses: actions/upload-artifact@master
       with:
-        args: gosout.zip application/zip
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: my-artifact
+        path: gosout.zip
