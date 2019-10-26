@@ -19,5 +19,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         file: "gosbot.zip"
-        tags: false
-        draft: true
+        tags: true
