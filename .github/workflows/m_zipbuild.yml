@@ -20,3 +20,4 @@ jobs:
       with:
         file: "gosbot.zip"
         tags: true
+        draft: false
