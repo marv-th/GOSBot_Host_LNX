@@ -10,8 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a multi-line script
-      run: |
-        "echo JO"
     - uses: "juankaram/archive-action@v1.0.0"
       with:
         args: "zip -r gosbuild.zip bots config cron dotnet instance m3i media playlists plugins"
