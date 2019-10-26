@@ -13,11 +13,10 @@ jobs:
       run: echo hallo
     - uses: "juankaram/archive-action@v1.0.0"
       with:
-        args: "zip -r gosbuild.zip bots config cron dotnet instance m3i media playlists plugins"
+        args: "zip -r gosbot.zip bots config cron dotnet instance m3i media playlists plugins"
     - uses: xresloader/upload-to-github-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: "gosbuild.zip"
-        tags: false
-        draft: true
+        file: "gosbot.zip"
+        tags: true
