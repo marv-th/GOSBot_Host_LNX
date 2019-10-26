@@ -14,5 +14,8 @@ jobs:
     - name: Run a multi-line script
       run: |
         zip -R gosbuild.zip *
-        git commit -m "Create ZIP file"
-        git push origin master
+    - name: Upload
+    - uses: actions/upload-artifact@master
+      with:
+        name: File upload
+        path: gosbuild.zip
